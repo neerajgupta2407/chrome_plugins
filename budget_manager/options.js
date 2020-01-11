@@ -23,8 +23,9 @@ $(function () {
                 message: "Total amount has been reset to 0",
                 iconUrl: "images/icon48.png"
             }
-            // console.log(notificationObj)
-            chrome.notifications.create('resetNotif', notificationObj)
+
+            chrome.notifications.create('resetNotif', notificationObj);
+            console.log(notificationObj);
         })
     });
 

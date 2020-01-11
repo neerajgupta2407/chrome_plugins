@@ -12,6 +12,12 @@
         "default_icon": "images/icon16.png",
         "default_popup": "popup.html"
     },
-    "permissions":["storage", "notifications"],
-    "options_page": "options.html"
+    "permissions":["storage",
+        "notifications",
+        "contextMenus"],
+    "options_page": "options.html",
+    "background" : {
+        "scripts":  ["eventPage.js"],
+        "persistent": false  // for event page, "persistent"is  false
+    }
 }
