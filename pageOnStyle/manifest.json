@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "PageStyle Extension",
+  "version": "1.0",
+  "description": "Changes font of particular page",
+  "icons":{
+    "128":"images/icon128.png",
+    "48":"images/icon48.png",
+    "16":"images/icon16.png"
+  },
+  "page_action": {
+    "default_icon": "images/icon16.png",
+    "default_popup": "popup.html",
+    "default_title": "PageonStyle"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",  // asking permission for reading the tabs info.
+    "https://developer.chrome.com/*",  // asking permission for specific pages
+    "https://www.google.co.in/*"
+    ],
+
+  "content_scripts": [
+    {
+      "matches": [ "https://developer.chrome.com/*","https://www.google.co.in/*"],
+      "js": ["content.js", "jquery-3.4.1.min.js" ],
+      "css": ["content.css"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Page Action extensions are useful only on specific pages. and grades out on other pages.
+Content scripts are powerful in manipulating the page Dom.
+
+COntentScripts cannot use all the chrome api's. So they commmunicate thorugh messages.
+They can inject CSS and JS and change the style of webpage.
+
+# PageOnStyle
+1) Access the pages of specific url and manipulates the DOM of those pages.
+2) We can inject our own JS and CSS using content scripts.
+
+content scripts can only access the current page dom directly.
+
+i. Popup.js send message to content scripts. via chrome.tabs.sendMessage
+ii. content scripts reads those messages via chrome.runtime.onMessage.addListener
+performs tose actions
+
